@@ -43,6 +43,10 @@ body {
   grid-template-columns: 8rem repeat(4, 1fr) 8rem;
   gap: 2rem 0;
 
+  @media only screen and (min-width: $bp-largest) {
+    grid-template-columns: 1fr repeat(4, 1fr) 1fr;
+  }
+
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 0 repeat(4, 1fr) 0;
   }

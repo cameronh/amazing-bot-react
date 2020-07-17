@@ -1,6 +1,7 @@
 import React from 'react';
 import item from '../item.png';
 import discord from '../discord.png';
+import { ReactComponent as Ellipsis } from '../ellipsis-v.svg';
 
 class Wishlist extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class Wishlist extends React.Component {
 
         <WishlistItem image={item} title="All In The Game" rating="5" ratingCount="216" price="$420.00" discord={discord} date="November 6, 2020" />
 
-        <WishlistItem image={item} title="A Man Has To Have A Code" rating="2.5" ratingCount="2,013" price="$20.00" discord={discord} date="March 13, 2020" />
+        <WishlistItem image={item} title="A Man Has To Have A Code" rating="1" ratingCount="2,013" price="$20.00" discord={discord} date="March 13, 2020" />
       </div>
     )
   }
@@ -33,6 +34,9 @@ class WishlistItem extends React.Component {
           <img src={this.props.discord} alt="Discord server"/>
         </div>
         <div className="wishlist__item--date">Item added {this.props.date}</div>
+        <div className="wishlist__item--manage">
+          <Ellipsis className="wishlist__item--manage-icon" />
+        </div>
       </div>
     )
   }
