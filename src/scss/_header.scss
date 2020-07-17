@@ -1,0 +1,30 @@
+.header {
+  background-color: $color-primary-dark;
+
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  display: flex;
+
+  &__logo {
+    flex: 0 0;
+    cursor: pointer;
+  }
+
+  &__title {
+    flex: 1 auto;
+    color: $color-primary-light;
+    font-size: 1.9rem;
+    align-self: center;
+  }
+
+  &__account {
+    flex: 0 0;
+    padding: 1rem 2rem;
+
+    &--logo {
+      cursor: pointer;
+      fill: $color-primary;
+    }
+  }
+}
