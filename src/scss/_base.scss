@@ -6,6 +6,12 @@ $color-primary-dark: #3e3a46;
 $color-primary-dark-2: #211e24;
 $color-primary-dark-3: #1c191f;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+
 // RESET //
 *,
 *::before,
@@ -36,4 +42,8 @@ body {
   grid-template-rows: 5rem minmax(8rem, 1fr);
   grid-template-columns: 8rem repeat(4, 1fr) 8rem;
   gap: 2rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 0 repeat(4, 1fr) 0;
+  }
 }
